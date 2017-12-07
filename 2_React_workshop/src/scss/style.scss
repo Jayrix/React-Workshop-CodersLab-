@@ -1,0 +1,42 @@
+// Colors
+$rainbow: (
+red: #FF0000,
+yellow: #FFFF00,
+green: #00FF00,
+blue: #0000FF,
+turquoise:#40e0d0
+);
+
+@each $name, $color in $rainbow {
+  @if $name == red {
+    .#{$name}-left{
+      border-left: 2px solid $color;
+      border-top: 2px solid $color;
+      border-bottom: 2px solid $color;
+    }
+    .#{$name}-right{
+      border-right: 2px solid $color;
+      border-top: 2px solid $color;
+      border-bottom: 2px solid $color;
+    }
+  } @else {
+    .#{$name}{
+    border: 2px solid $color;
+    }
+  }
+
+}
+
+#app{
+  margin: 20px;
+}
+
+input[type="text"]{
+  display: block;
+  margin-bottom: 20px;
+}
+
+table{
+
+  margin-top: 40px;
+}
